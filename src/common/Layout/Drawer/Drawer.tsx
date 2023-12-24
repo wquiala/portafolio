@@ -1,16 +1,12 @@
-import * as React from "react";
-import MailIcon from "@mui/icons-material/Mail";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MenuIcon from "@mui/icons-material/Menu";
-import InfoIcon from "@mui/icons-material/Info";
-import DateRangeIcon from "@mui/icons-material/DateRange";
-import SchoolIcon from "@mui/icons-material/School";
-import PsychologyIcon from "@mui/icons-material/Psychology";
 import ContactsIcon from "@mui/icons-material/Contacts";
+import DateRangeIcon from "@mui/icons-material/DateRange";
+import InfoIcon from "@mui/icons-material/Info";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
+import MenuIcon from "@mui/icons-material/Menu";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import SchoolIcon from "@mui/icons-material/School";
 import {
   Box,
-  Divider,
   Drawer,
   IconButton,
   List,
@@ -19,6 +15,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+import * as React from "react";
 import { useNavigate } from "react-router-dom";
 
 const listDrawer = [
