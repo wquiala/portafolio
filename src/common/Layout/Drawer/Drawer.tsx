@@ -7,6 +7,7 @@ import DateRangeIcon from "@mui/icons-material/DateRange";
 import SchoolIcon from "@mui/icons-material/School";
 import PsychologyIcon from "@mui/icons-material/Psychology";
 import ContactsIcon from "@mui/icons-material/Contacts";
+import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import {
   Box,
   Divider,
@@ -45,6 +46,11 @@ const listDrawer = [
     icon: <ContactsIcon color="primary" />,
     text: "Contact",
     url: "/contact",
+  },
+  {
+    icon: <LaptopMacIcon color="primary" />,
+    text: "Projects",
+    url: "/projects",
   },
 ];
 
@@ -87,8 +93,9 @@ export const TemporaryDrawer = () => {
           </ListItem>
         ))}
       </List>
-      <Divider />
-      <List>
+      {/*       <Divider />
+       */}{" "}
+      {/* <List>
         {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -99,7 +106,7 @@ export const TemporaryDrawer = () => {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </Box>
   );
 

@@ -1,11 +1,12 @@
 import React from "react";
-import { Grid, Avatar, Stack, Typography, Paper } from "@mui/material";
+import { Grid, Avatar, Stack, Typography, Paper, Link } from "@mui/material";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { GitHub } from "@mui/icons-material";
+import { Link as LinkR } from "react-router-dom";
 const img = "1673184574720.jpeg";
 
 interface IContactProps {
@@ -53,6 +54,16 @@ export const Contact: React.FC<IContactProps> = () => {
           </Grid>
           <Grid item>
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
+              <AlternateEmailIcon
+                color="primary"
+                sx={{ width: 35, height: 35 }}
+                titleAccess="Location"
+              />
+              <Typography>wilfredoquiala@gmail.com</Typography>
+            </Stack>
+          </Grid>
+          <Grid item>
+            <Stack direction={"row"} alignItems={"center"} spacing={2}>
               <TelegramIcon
                 color="primary"
                 sx={{ width: 35, height: 35 }}
@@ -70,20 +81,19 @@ export const Contact: React.FC<IContactProps> = () => {
                 titleAccess="Location"
               />
               <Typography>
-                www.linkedin.com/in/wilfredo-quiala-fonseca
+                <Link
+                  component={LinkR}
+                  to={"http://www.linkedin.com/in/wilfredo-quiala-fonseca"}
+                  underline="none"
+                  color={"wheat"}
+                  target="_blank"
+                >
+                  www.linkedin.com/in/wilfredo-quiala-fonseca
+                </Link>
               </Typography>
             </Stack>
           </Grid>
-          <Grid item>
-            <Stack direction={"row"} alignItems={"center"} spacing={2}>
-              <AlternateEmailIcon
-                color="primary"
-                sx={{ width: 35, height: 35 }}
-                titleAccess="Location"
-              />
-              <Typography>wilfredoquiala@gmail.com</Typography>
-            </Stack>
-          </Grid>
+
           <Grid item>
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
               <GitHub
@@ -91,7 +101,15 @@ export const Contact: React.FC<IContactProps> = () => {
                 sx={{ width: 35, height: 35 }}
                 titleAccess="Location"
               />
-              <Typography>https://github.com/wquiala</Typography>
+              <Link
+                component={LinkR}
+                to={"https://github.com/wquiala"}
+                underline="none"
+                color={"wheat"}
+                target="_blank"
+              >
+                <Typography>https://github.com/wquiala</Typography>
+              </Link>
             </Stack>
           </Grid>
         </Grid>

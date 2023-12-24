@@ -17,8 +17,8 @@ export const ProjectCard: React.FC<Props> = ({ name, description, img }) => {
       <ListItemButton
         onClick={handleOpen}
         sx={{
-          background: "rgb(93, 100, 209)",
-          ":hover": { background: "rgb(93, 100, 209)" },
+          background: "rgb(93, 100, 209, 0.1)",
+          ":hover": { background: "rgb(93, 100, 209, 0.1)" },
         }}
       >
         <Typography

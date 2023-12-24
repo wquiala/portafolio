@@ -49,12 +49,14 @@ export const ExperienceCard: React.FC<Props> = ({
   };
 
   return (
-    <Card sx={{ width: 310, background: "rgb(93, 100, 209)", color: "white" }}>
+    <Card
+      sx={{ width: 310, background: "rgb(93, 100, 209, 0.1)", color: "white" }}
+    >
       <CardHeader
         sx={{ height: 75, padding: 1, alignItems: "start" }}
         title={typew}
         subheader={
-          <Typography color={"rgb(1, 4, 49)"} textAlign={"start"}>
+          <Typography color={"wheat"} textAlign={"start"}>
             {place}, {periodo}
           </Typography>
         }

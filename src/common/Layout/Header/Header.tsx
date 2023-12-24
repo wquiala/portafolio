@@ -15,13 +15,23 @@ export const Header: React.FC<IHeaderProps> = () => {
         direction={"column"}
       >
         <Grid item>
-          <Typography variant="h4">Wilfredo Quiala Fonseca</Typography>
+          <Typography variant="h4" textAlign={"center"}>
+            Wilfredo Quiala Fonseca
+          </Typography>
         </Grid>
-
-        <Grid item sx={{ color: "#848D97" }}>
+        <Grid item sx={{ color: "wheat" }}>
           <Typography variant="subtitle1" sx={{ font: "italic 20px cursive" }}>
             Computer science engineer || FullStack developer
           </Typography>
+        </Grid>{" "}
+        <Grid
+          item
+          sx={{
+            color: "wheat",
+            display: { xs: "initial", sm: "initial", xl: "none" },
+          }}
+        >
+          <Typography variant="subtitle1">wilfredoquiala@gmail.com</Typography>
         </Grid>
       </Grid>
     </Toolbar>

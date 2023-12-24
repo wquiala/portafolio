@@ -57,7 +57,7 @@ const ExperienceItems = [
   {
     place: "Pre-university institute (Cuba)",
     periodo: "Sep 2014- Dec 2016",
-    namew: "high school teacher",
+    namew: "High school teacher",
     work: {
       typew: "Mathematics teacher",
       functions: [],
