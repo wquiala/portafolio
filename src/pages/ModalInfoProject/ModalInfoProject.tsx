@@ -1,17 +1,16 @@
+import CloseIcon from "@mui/icons-material/Close";
 import {
-  Modal,
   Box,
-  Typography,
+  Button,
   Grid,
   IconButton,
-  Button,
+  Modal,
+  Typography,
 } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
-import { styled } from "@mui/styles";
 import * as React from "react";
 
-const Img = styled("img")({ width: "20%", height: "20%" });
-
+/* const Img = styled("img")({ width: "20%", height: "20%" });
+ */
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -37,7 +36,6 @@ export const ModalInfoProject: React.FC<Props> = ({
   open,
   name,
   description,
-  img,
 }) => {
   return (
     <div>
