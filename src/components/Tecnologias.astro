@@ -1,0 +1,152 @@
+---
+import {
+  CssIcon,
+  DockerIcon,
+  ExpressIcon,
+  HtmlIcon,
+  JavaScriptIcon,
+  LinuxIcon,
+  MacOsIcon,
+  MongoIcon,
+  MysqlIcon,
+  NestIcon,
+  NextIcon,
+  NodeJsIcon,
+  PostgreIcon,
+  ReactIcon,
+  TailwindcssIcon,
+  TypeScriptIco,
+  WindowsIcon,
+} from "./Icons";
+---
+
+<div class="flex flex-col w-full gap-7 mt-7">
+  <h1 class="font-extrabold text-4xl text-orange-200">
+    Mi stack de desarrollo
+  </h1>
+  <div
+    class="grid grid-cols-5 gap-4 justify-items-center text-zinc-200 text-2xl"
+  >
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <HtmlIcon />
+      <span class="">HTML</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <CssIcon />
+      <span>CSS</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <JavaScriptIcon />
+      <span>JavaScript</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <TypeScriptIco />
+      <span>TypeScript</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <NodeJsIcon />
+      <span>NodeJs</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <ReactIcon />
+      <span>Rect</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <NextIcon />
+      <span>Next.JS</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <TailwindcssIcon />
+      <span>TailwindCSS</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <NestIcon />
+      <span>NestJs</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <ExpressIcon />
+      <span>ExpressJs</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <DockerIcon />
+      <span>Docker</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <MongoIcon />
+      <span>Mongo DB</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <MysqlIcon />
+      <span>MySql</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <PostgreIcon />
+      <span>PostgreSql</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <LinuxIcon />
+      <span>Linux</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <WindowsIcon />
+      <span>Windows</span>
+    </div>
+    <div
+      class="card flex flex-col justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
+    >
+      <MacOsIcon />
+      <span>Mac Os</span>
+    </div>
+  </div>
+</div>
+<style>
+  .card {
+    animation: revealCar linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+  }
+  @keyframes revealCar {
+    from {
+      opacity: 0;
+      /* translate: 0 100px;
+      scale: 0.5; */
+    }
+    to {
+      opacity: 1;
+      /* translate: 0 0;
+      scale: 1; */
+    }
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+interface Props {
+  name: string;
+  tecnologies: string[];
+}
+
+const { name, tecnologies } = Astro.props;
+---
+
+<article class="group relative">
+  <a
+    href=""
+    class="flex flex-col w-56 transition-all duration-300 relative p-2 overflow-hidden gap-2 rounded-md shadow-lg hover:shadow-xl hover:bg-zinc-800 bg-zinc-500/30"
+  >
+    <picture class="aspect-square h-auto w-full flex-none">
+      <img src="" alt="" />
+    </picture>
+    <div class="flex flex-auto flex-col px-2">
+      <h4 class="text-white text-sm">
+        {name}
+      </h4>
+      <span class="text-xs text-zinc-400">{tecnologies}</span>
+    </div>
+  </a>
+</article>

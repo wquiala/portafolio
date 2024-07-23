@@ -1,0 +1,63 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+export interface Projects {
+  name: string;
+  tecnologies: string[];
+}
+export const projets: Projects[] = [
+  {
+    name: "Google Drive Clon",
+    tecnologies: ["NestJs, React, TypeScript"],
+  },
+  {
+    name: "Journal App",
+    tecnologies: ["React, Material UI, TypeScript"],
+  },
+  {
+    name: "Spotify Clon",
+    tecnologies: ["React, Astro, TypeScript"],
+  },
+  {
+    name: "Heroes APP",
+    tecnologies: ["React, Material UI, TypeScript"],
+  },
+  {
+    name: "GIF Expert",
+    tecnologies: ["React, Material UI, TypeScript"],
+  },
+];
+---
+
+<div class="flex flex-col w-full gap-7 mt-7">
+  <h1 class="font-extrabold text-4xl text-orange-200">Proyectos</h1>
+  <div class="grid grid-cols-4 gap-5 justify-items-center">
+    {
+      projets.map((p) => (
+        <div class="card">
+          <ProjectCard name={p.name} tecnologies={p.tecnologies} />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style is:global>
+  .card {
+    animation: revealCar linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+  }
+  @keyframes revealCar {
+    from {
+      opacity: 0;
+      translate: 0 100px;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+      scale: 1;
+    }
+  }
+</style>
