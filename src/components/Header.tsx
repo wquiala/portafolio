@@ -3,7 +3,7 @@ import { InfoIcon, ExperienceIcon, EducationIcon } from "./Icons";
 export const HeaderAPP: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full p-4 text-xl">
-      <div className="justify-between text-orange-200">
+      <div className="justify-between text-blue-100">
         <a
           href="#acerca"
           className="flex-row justify-center cursor-pointer hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 mr-2 mb-2 hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-100 scale-90 gap-x-2 opacity-90 hover:opacity-100"
