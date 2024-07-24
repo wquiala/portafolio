@@ -60,9 +60,8 @@ const { title } = Astro.props;
         <slot />
       </main>
       <footer
-        class="[grid-area:footer] flex flex-col border border-indigo-600 p-2"
+        class="[grid-area:footer] flex flex-col p-2 bg-[#a1a1aa66] blur-5"
       >
-        <div>Prueba</div>
       </footer>
     </div>
   </body>
@@ -100,7 +99,7 @@ const { title } = Astro.props;
 
     @keyframes headerB {
       to {
-        background: rgba(161, 161, 170, 0.4);
+        background: #a1a1aa66;
         backdrop-filter: blur(5px);
         padding: 7px 16px;
         color: whitesmoke;
@@ -114,7 +113,7 @@ const { title } = Astro.props;
         "main"
         "footer";
       grid-template-columns: 1fr;
-      grid-template-rows: 50px 1fr 50px;
+      grid-template-rows: 50px 1fr 30px;
     }
     .header {
       grid-area: header;
@@ -146,7 +145,7 @@ const { title } = Astro.props;
       margin: auto;
       width: 90vw;
     }
-    .lines1 {
+    /*    .lines1 {
       position: absolute;
       top: 0;
       left: 0;
@@ -154,7 +153,7 @@ const { title } = Astro.props;
       height: 90vh%;
       margin: auto;
       width: 80%;
-    }
+    } */
     .lines .line {
       position: absolute;
       width: 1px;

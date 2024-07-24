@@ -4,15 +4,12 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        revealCar: {
+        revealCar1: {
           from: {
-            /* opacity: 0,
-            transform: "translate(0px, 0px) scale(0.5)", */
+            opacity: 0,
           },
           to: {
-            /* opacity: 1,
-
-            transform: "translate(0px, 100px) scale(1)", */
+            opacity: 1,
           },
         },
         "accordion-down": {
@@ -27,7 +24,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        revealCar: "revealCar",
+        revealCar1: "revealCar1",
       },
 
       /* animation: {

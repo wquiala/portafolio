@@ -14,10 +14,10 @@ export function Experiencia() {
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem
           value="item-1"
-          className="animate-revealCar"
+          className="animate-revealCar1 transition-all"
           style={{
             animationTimeline: "view()",
-            animationRange: "entry 20% cover 30%",
+            animationRange: "entry 20% cover 50%",
           }}
         >
           <AccordionTrigger className="text-xl">
@@ -33,9 +33,9 @@ export function Experiencia() {
           value="item-2"
           style={{
             animationTimeline: "view()",
-            animationRange: "entry 20% cover 30%",
+            animationRange: "entry 20% cover 50%",
           }}
-          className="animate-revealCar transition-all"
+          className="animate-revealCar1 transition-all"
         >
           <AccordionTrigger className="text-xl">
             Programador de equipos de cómputo. Autónomo (Santiago de Cuba,
@@ -54,9 +54,9 @@ export function Experiencia() {
           value="item-3"
           style={{
             animationTimeline: "view()",
-            animationRange: "entry 20% cover 30%",
+            animationRange: "entry 20% cover 50%",
           }}
-          className="animate-revealCar transition-all"
+          className="animate-revealCar1 transition-all"
         >
           <AccordionTrigger className="text-xl">
             Profesor Universitario. Universidad de Oriente, Departamento de
@@ -71,30 +71,12 @@ export function Experiencia() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem
-          value="item-4"
-          style={{
-            animationTimeline: "view()",
-            animationRange: "entry 20% cover 30%",
-          }}
-          className="animate-revealCar transition-all"
-        >
-          <AccordionTrigger className="text-xl">
-            Profesor de Bachillerato. Centro Mixto “Mariana Grajales” (Cuba).
-            2014-2017.
-          </AccordionTrigger>
-          <AccordionContent className="flex flex-col text-lg px-6">
-            <p>Funciones:</p>
-            <span>- Impartir docencia</span>
-            <span>- Atención a estudiantes</span>
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem
           value="item-5"
           style={{
             animationTimeline: "view()",
-            animationRange: "entry 20% cover 30%",
+            animationRange: "entry 20% cover 50%",
           }}
-          className="animate-revealCar"
+          className="animate-revealCar1 transition-all"
         >
           <AccordionTrigger className="text-xl">
             Reparador de artículos electrónicos. Autónomo. (Santiago de Cuba,
@@ -106,6 +88,24 @@ export function Experiencia() {
               - Reparador de software, firmware y hardware de sistemas
               informáticos
             </span>
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem
+          value="item-4"
+          style={{
+            animationTimeline: "view()",
+            animationRange: "entry 20% cover 50%",
+          }}
+          className="animate-revealCar1 transition-all"
+        >
+          <AccordionTrigger className="text-xl">
+            Profesor de Bachillerato. Centro Mixto “Mariana Grajales” (Cuba).
+            2014-2017.
+          </AccordionTrigger>
+          <AccordionContent className="flex flex-col text-lg px-6">
+            <p>Funciones:</p>
+            <span>- Impartir docencia</span>
+            <span>- Atención a estudiantes</span>
           </AccordionContent>
         </AccordionItem>
       </Accordion>

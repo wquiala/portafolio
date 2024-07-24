@@ -8,56 +8,14 @@ import { EmailIcon, GithubIcon, LinkedimIcon } from "../components/Icons";
 import Proyectos from "../components/Proyectos.astro";
 import Tecnologias from "../components/Tecnologias.astro";
 import Layout from "../layouts/Layout.astro";
+import Presentacion from "../components/Presentacion.astro";
 ---
 
 <Layout title="Index">
   <main
     class="relative justify-center items-center p-5 flex flex-col gap-16 divide-y divide-dotted hover:divide-solid"
   >
-    <div class="flex flex-row gap-28">
-      <div class="flex flex-col w-[70%] text-gray-300 gap-9">
-        <h1 class="font-extrabold text-4xl text-blue-400 shadow-current">
-          Hi! 👋 Mi nombre es Wilfredo Quiala Fonseca
-        </h1>
-        <span class="text-xl text-gray-400"
-          >Ingeniero Informático con experiencia en el desarrollo de software.</span
-        >
-
-        <div class="flex flex-row gap-1 w-full text-xl mt-14">
-          <a
-            class="flex flex-row justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
-            href=""><LinkedimIcon /> Linkedin</a
-          >
-          <a
-            class="flex flex-row justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
-            href=""><GithubIcon /> GitHub</a
-          >
-          <a
-            class="flex flex-row justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
-            href=""><EmailIcon /> wilfredoquiala@gmail.com</a
-          >
-          <a
-            class="flex flex-row justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
-            href=""><CallIcon /> 613276721</a
-          >
-          <a
-            class="flex flex-row justify-center items-center hover:shadow-lg transition-all duration-200 ease-in-out hover:scale-110 scale-90"
-            href=""><TelegramIcon /> Telegram</a
-          >
-          <a
-            class="flex flex-row justify-center items-center hover:shadow-2xl transition-all duration-200 ease-in-out hover:scale-110 scale-90"
-            href=""><WhatsAppIcon /> WhatsApp</a
-          >
-        </div>
-      </div>
-      <picture>
-        <img
-          class="rounded-full shadow-lg hover:shadow-gray-800 hover:shadow-2xl w-60 h-60"
-          src="/imgs/foto.jpeg"
-          alt="Esta es la img"
-        />
-      </picture>
-    </div>
+    <div class="flex flex-row gap-28"><Presentacion /></div>
     <div class="w-full" id="acerca"><Acercademi /></div>
     <div class="w-full" id="estudios"><Estudios /></div>
     <div class="w-full" id="experiencia"><Experiencia client:load /></div>
