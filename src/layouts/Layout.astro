@@ -34,7 +34,7 @@ const { title } = Astro.props;
   <div class="progress"></div>
 
   <div
-    class="grid place-items-center app relative w-[60%] p-2 gap-9 mx-auto px-4bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+    class="place-items-center app relative w-[60%] p-2 gap-9 mx-auto px-4bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
   >
     <!-- <section
         class="absolute top-0 right-0 left-0 flex h-full justify-center items-center bottom-96"
@@ -53,13 +53,15 @@ const { title } = Astro.props;
         </div>
       </section>
  -->
-    <div class="[grid-area:div] info">
+    <div class="[grid-area:div] info w-full h-[100%] text-white">
       <HeaderAPP />
     </div>
     <main class="[grid-area:main] min-h-[75vh] w-full">
       <slot />
     </main>
-    <footer class="[grid-area:footer] flex flex-col p-2 bg-[#a1a1aa66] blur-5">
+    <footer
+      class="[grid-area:footer] flex flex-col p-2 bg-[#a1a1aa66] blur-5 w-full"
+    >
     </footer>
   </div>
 </html>
@@ -73,6 +75,18 @@ const { title } = Astro.props;
     animation: headerB linear both;
     animation-timeline: scroll(root block);
     animation-range: 0 200px;
+    transition: all ease-in 2s;
+  }
+
+  @keyframes headerB {
+    to {
+      background: #a1a1aa66;
+      backdrop-filter: blur(5px);
+      padding: 7px 16px;
+      height: 70%;
+
+      color: bisque;
+    }
   }
   .progress {
     position: sticky;
@@ -95,15 +109,6 @@ const { title } = Astro.props;
     }
   }
 
-  @keyframes headerB {
-    to {
-      background: #a1a1aa66;
-      backdrop-filter: blur(5px);
-      padding: 7px 16px;
-      color: whitesmoke;
-      height: 70%;
-    }
-  }
   .app {
     display: grid;
     grid-template-areas:
