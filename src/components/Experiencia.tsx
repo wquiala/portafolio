@@ -26,6 +26,7 @@ export function Experiencia() {
           <AccordionContent className="flex flex-col text-lg px-6">
             <p>Funciones:</p>
             <span>- Ingeniero de software.</span>
+            <span>- Desarrollo de software.</span>
             <span>- Test unitarios.</span>
           </AccordionContent>
         </AccordionItem>

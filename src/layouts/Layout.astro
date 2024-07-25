@@ -18,25 +18,26 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>Portafolio Wilfredo Quiala Fonseca</title>
   </head>
-  <body>
-    <!--  <div class="lines">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div> 
-    <div class="lines1">
-      <div class="line1"></div>
-      <div class="line1"></div>
-      <div class="line1"></div>
-    </div>-->
-    <div class="progress"></div>
+  <body class="container"
+  >
+  </body><!-- <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </body>
+  <div class="lines1">
+    <div class="line1"></div>
+    <div class="line1"></div>
+    <div class="line1"></div>
+  </div>-->
+  <div class="progress"></div>
 
-    <div
-      class="app relative w-[60%] p-2 gap-9 mx-auto px-4bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
-    >
-      <!-- <section
+  <div
+    class="app relative w-[60%] p-2 gap-9 mx-auto px-4bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
+  >
+    <!-- <section
         class="absolute top-0 right-0 left-0 flex h-full justify-center items-center bottom-96"
       >
         <div
@@ -53,99 +54,97 @@ const { title } = Astro.props;
         </div>
       </section>
  -->
-      <div class="[grid-area:div] info">
-        <HeaderAPP />
-      </div>
-      <main class="[grid-area:main] min-h-[75vh] w-full">
-        <slot />
-      </main>
-      <footer
-        class="[grid-area:footer] flex flex-col p-2 bg-[#a1a1aa66] blur-5"
-      >
-      </footer>
+    <div class="[grid-area:div] info">
+      <HeaderAPP />
     </div>
-  </body>
+    <main class="[grid-area:main] min-h-[75vh] w-full">
+      <slot />
+    </main>
+    <footer class="[grid-area:footer] flex flex-col p-2 bg-[#a1a1aa66] blur-5">
+    </footer>
+  </div>
+</html>
 
-  <style is:global>
-    .info {
-      position: sticky;
-      top: 0;
-      left: 0;
-      z-index: 10;
-      animation: headerB linear both;
-      animation-timeline: scroll(root block);
-      animation-range: 0 200px;
-    }
-    .progress {
-      position: sticky;
-      top: 0;
+<style is:global>
+  .info {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    animation: headerB linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 200px;
+  }
+  .progress {
+    position: sticky;
+    top: 0;
+    width: 0;
+    max-width: 100%;
+    background-color: whitesmoke;
+    height: 0.3em;
+    z-index: 20;
+    animation: progress-grow auto linear;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes progress-grow {
+    from {
       width: 0;
-      max-width: 100%;
-      background-color: whitesmoke;
-      height: 0.3em;
-      z-index: 20;
-      animation: progress-grow auto linear;
-      animation-timeline: scroll(root block);
     }
+    to {
+      width: 100%;
+    }
+  }
 
-    @keyframes progress-grow {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
+  @keyframes headerB {
+    to {
+      background: #a1a1aa66;
+      backdrop-filter: blur(5px);
+      padding: 7px 16px;
+      color: whitesmoke;
+      height: 70%;
     }
+  }
+  .app {
+    display: grid;
+    grid-template-areas:
+      "div"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 30px;
+  }
+  .header {
+    grid-area: header;
+  }
+  .main {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+  }
+  html {
+    font-family: "CircularStd", system-ui, sans-serif;
+    background: #000214;
+    color: white;
+  }
 
-    @keyframes headerB {
-      to {
-        background: #a1a1aa66;
-        backdrop-filter: blur(5px);
-        padding: 7px 16px;
-        color: whitesmoke;
-        height: 70%;
-      }
-    }
-    .app {
-      display: grid;
-      grid-template-areas:
-        "div"
-        "main"
-        "footer";
-      grid-template-columns: 1fr;
-      grid-template-rows: 50px 1fr 30px;
-    }
-    .header {
-      grid-area: header;
-    }
-    .main {
-      grid-area: main;
-    }
-    .footer {
-      grid-area: footer;
-    }
-    html {
-      font-family: "CircularStd", system-ui, sans-serif;
-      background: #000214;
-      color: white;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box !important;
-    }
-
-    .lines {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 150%;
-      margin: auto;
-      width: 90vw;
-    }
-    /*    .lines1 {
+  .lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150%;
+    margin: auto;
+    width: 90vw;
+  }
+  /*    .lines1 {
       position: absolute;
       top: 0;
       left: 0;
@@ -154,195 +153,194 @@ const { title } = Astro.props;
       margin: auto;
       width: 80%;
     } */
-    .lines .line {
-      position: absolute;
-      width: 1px;
-      height: 150vh;
-      top: 0;
-      left: 50%;
-      overflow: hidden;
-    }
+  .lines .line {
+    position: absolute;
+    width: 1px;
+    height: 150vh;
+    top: 0;
+    left: 50%;
+    overflow: hidden;
+  }
 
-    .lines1 .line1 {
-      position: absolute;
-      width: 85vw;
-      height: 1px;
-      top: 50%;
-      left: 0;
-      overflow: hidden;
-    }
+  .lines1 .line1 {
+    position: absolute;
+    width: 85vw;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    overflow: hidden;
+  }
 
-    .lines .line::after {
-      content: "";
-      display: block;
-      position: absolute;
-      height: 3vh;
-      width: 100%;
+  .lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 3vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 75%,
+      #ffffff 100%
+    );
+    -webkit-animation: run 12s 0s infinite;
+    animation: run 12s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+
+  .lines1 .line1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 2vw;
+    left: -50%;
+    top: 0;
+
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      #ffffff 75%,
+      #ffffff 100%
+    );
+    -webkit-animation: run1 12s 0s infinite;
+    animation: run1 12s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  .lines .line:nth-child(1) {
+    margin-left: -25%;
+  }
+  .lines .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  .lines .line:nth-child(3) {
+    margin-left: 25%;
+  }
+  .lines .line:nth-child(4) {
+    margin-left: 50%;
+  }
+  .lines .line:nth-child(5) {
+    margin-left: -50%;
+  }
+  .lines .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+  .lines .line:nth-child(5)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+
+  .lines1 .line1:nth-child(1) {
+    margin-top: 59.1%;
+  }
+
+  .lines1 .line1:nth-child(2) {
+    margin-top: 137%;
+  }
+  .lines1 .line1:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  .lines1 .line1:nth-child(3) {
+    margin-top: 50%;
+  }
+  .lines1 .line1:nth-child(4) {
+    margin-top: 80%;
+  }
+  .lines1 .line1:nth-child(5) {
+    margin-top: -150%;
+  }
+  .lines1 .line1:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+  .lines1 .line1:nth-child(5)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+  }
+  @-webkit-keyframes run {
+    0% {
       top: -50%;
-      left: 0;
-
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        #ffffff 75%,
-        #ffffff 100%
-      );
-      -webkit-animation: run 12s 0s infinite;
-      animation: run 12s 0s infinite;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
     }
+    100% {
+      top: 100%;
+    }
+  }
 
-    .lines1 .line1::after {
-      content: "";
-      display: block;
-      position: absolute;
-      height: 100%;
-      width: 2vw;
+  @keyframes run {
+    0% {
+      top: -50%;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+
+  @-webkit-keyframes run1 {
+    0% {
       left: -50%;
-      top: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
 
-      background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        #ffffff 75%,
-        #ffffff 100%
-      );
-      -webkit-animation: run1 12s 0s infinite;
-      animation: run1 12s 0s infinite;
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-      -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  @keyframes run1 {
+    0% {
+      left: -50%;
     }
-    .lines .line:nth-child(1) {
-      margin-left: -25%;
+    100% {
+      left: 100%;
     }
-    .lines .line:nth-child(1)::after {
-      -webkit-animation-delay: 2s;
-      animation-delay: 2s;
-    }
-    .lines .line:nth-child(3) {
-      margin-left: 25%;
-    }
-    .lines .line:nth-child(4) {
-      margin-left: 50%;
-    }
-    .lines .line:nth-child(5) {
-      margin-left: -50%;
-    }
-    .lines .line:nth-child(3)::after {
-      -webkit-animation-delay: 2.5s;
-      animation-delay: 2.5s;
-    }
-    .lines .line:nth-child(5)::after {
-      -webkit-animation-delay: 2.5s;
-      animation-delay: 2.5s;
-    }
+  }
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    .lines1 .line1:nth-child(1) {
-      margin-top: 59.1%;
-    }
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    .lines1 .line1:nth-child(2) {
-      margin-top: 137%;
-    }
-    .lines1 .line1:nth-child(1)::after {
-      -webkit-animation-delay: 2s;
-      animation-delay: 2s;
-    }
-    .lines1 .line1:nth-child(3) {
-      margin-top: 50%;
-    }
-    .lines1 .line1:nth-child(4) {
-      margin-top: 80%;
-    }
-    .lines1 .line1:nth-child(5) {
-      margin-top: -150%;
-    }
-    .lines1 .line1:nth-child(3)::after {
-      -webkit-animation-delay: 2.5s;
-      animation-delay: 2.5s;
-    }
-    .lines1 .line1:nth-child(5)::after {
-      -webkit-animation-delay: 2.5s;
-      animation-delay: 2.5s;
-    }
-    @-webkit-keyframes run {
-      0% {
-        top: -50%;
-      }
-      100% {
-        top: 100%;
-      }
-    }
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    @keyframes run {
-      0% {
-        top: -50%;
-      }
-      100% {
-        top: 100%;
-      }
-    }
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
 
-    @-webkit-keyframes run1 {
-      0% {
-        left: -50%;
-      }
-      100% {
-        left: 100%;
-      }
-    }
-
-    @keyframes run1 {
-      0% {
-        left: -50%;
-      }
-      100% {
-        left: 100%;
-      }
-    }
-    @font-face {
-      font-family: "CircularStd";
-      src: url("/fonts/CircularStd-Medium.woff2") format("woff2");
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "CircularStd";
-      src: url("/fonts/CircularStd-Book.woff2") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "CircularStd";
-      src: url("/fonts/CircularStd-Light.woff2") format("woff2");
-      font-weight: 300;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "CircularStd";
-      src: url("/fonts/CircularStd-Bold.woff2") format("woff2");
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    @font-face {
-      font-family: "CircularStd";
-      src: url("/fonts/CircularStd-Black.woff2") format("woff2");
-      font-weight: 900;
-      font-style: normal;
-      font-display: swap;
-    }
-  </style>
-</html>
+  @font-face {
+    font-family: "CircularStd";
+    src: url("/fonts/CircularStd-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>

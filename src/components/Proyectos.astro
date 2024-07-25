@@ -1,42 +1,53 @@
 ---
-import ProjectCard from "./ProjectCard.astro";
+import type React from "react";
+import { SpotifyIcon } from "./Icons";
+import { ProjectCard } from "./ProjectCard";
+import type { ReactNode } from "react";
 
 export interface Projects {
   name: string;
   tecnologies: string[];
-  url: string;
+  urlWeb: string;
+  urlGithub: string;
   img: string;
 }
 export const projets: Projects[] = [
   {
     name: "Google Drive Clon",
     tecnologies: ["NestJs, React, TypeScript"],
-    url: "",
-    img: "./imgs/googledriveApp.png",
+
+    img: "./imgs/googdrive.svg",
+    urlWeb: "",
+    urlGithub: "",
   },
   {
     name: "Journal App",
     tecnologies: ["React, Material UI, TypeScript"],
-    url: "",
-    img: "./imgs/journal.png",
+
+    img: "./imgs/calendar.svg",
+    urlWeb: "",
+    urlGithub: "",
   },
   {
     name: "Spotify Clon",
     tecnologies: ["React, Astro, TypeScript"],
-    url: "",
-    img: "./imgs/spotify.webp",
+    img: "./imgs/spotify.svg",
+    urlWeb: "",
+    urlGithub: "",
   },
   {
     name: "GIF Expert",
     tecnologies: ["React, Material UI, TypeScript"],
-    url: "",
-    img: "./imgs/gifexpert.jpg",
+    img: "./imgs/gift.svg",
+    urlWeb: "",
+    urlGithub: "",
   },
   {
     name: "Heroes APP",
     tecnologies: ["React, Material UI, TypeScript"],
-    url: "https://heroes-app-iota.vercel.app/",
-    img: "./imgs/heroes.jpg",
+    urlWeb: "https://heroes-app-iota.vercel.app/",
+    img: "./imgs/heroes.svg",
+    urlGithub: "",
   },
 ];
 ---
@@ -49,7 +60,8 @@ export const projets: Projects[] = [
         <div class="card">
           <ProjectCard
             name={p.name}
-            url={p.url}
+            urlWeb={p.urlWeb}
+            urlGithub={p.urlGithub}
             tecnologies={p.tecnologies}
             img={p.img}
           />
