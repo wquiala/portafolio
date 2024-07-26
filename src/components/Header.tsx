@@ -2,7 +2,7 @@ import { InfoIcon, ExperienceIcon, EducationIcon, IconStack } from "./Icons";
 
 export const HeaderAPP: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-full p-4 text-xl">
+    <div className="flex flex-col justify-center items-center h-full p-4 text-lg">
       <div className="justify-between">
         <a
           href="#acerca"
