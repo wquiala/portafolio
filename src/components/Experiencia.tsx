@@ -7,7 +7,7 @@ import {
 
 export function Experiencia() {
   return (
-    <div className="flex flex-col gap-7 mt-7 text-zinc-200">
+    <div className="flex flex-col gap-7 mt-7 text-zinc-400 hover:text-zinc-200">
       <h1 className="font-extrabold text-4xl  text-blue-400">
         Experiencia laboral
       </h1>

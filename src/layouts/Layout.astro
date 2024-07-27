@@ -1,6 +1,7 @@
 ---
+import { ArrowIcon } from "../components/Icons";
 import { HeaderAPP } from "../components/Header";
-
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
 }
@@ -17,6 +18,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Portafolio Wilfredo Quiala Fonseca</title>
+    <ViewTransitions />
   </head>
   <body>
   </body><!-- <div class="lines">
@@ -32,10 +34,11 @@ const { title } = Astro.props;
     <div class="line1"></div>
   </div>-->
   <div class="progress"></div>
-
   <div
     class="container app relative p-2 gap-9 mx-auto px-4bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl"
   >
+    <a class="fixed bottom-16 right-20" href=""><ArrowIcon /></a>
+
     <!-- <section
         class="absolute top-0 right-0 left-0 flex h-full justify-center items-center bottom-96"
       >
